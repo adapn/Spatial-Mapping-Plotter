@@ -47,8 +47,14 @@ The 2DX spatial mapping system integrates a VL53L1X Time-of-Flight sensor with a
 ## Detailed Description
 The system is built with an MSP-EXP432E401Y microcontroller, a VL53L1X ToF sensor, and a UNLN2003 stepper motor. The microcontroller manages data acquisition and motor control, making it ideal for embedded systems with high performance and easy customization.
 
+### Block Diagram
+![Block Diagram](Block_diagram.PNG)
+
 ## Distance Measurements
 Distance is captured via the ToF sensor through analog to digital conversion and communicated via I2C. Measurements are taken by the rotating stepper motor and are sent to a PC using UART for 3D plotting.
+
+### Spatial Mapping Process
+![Spatial Mapping Process](Spatial_Mapping_Process.PNG)
 
 ## Visualization
 Data from the microcontroller is visualized on a PC using Python and Open3D libraries. This allows the creation of a 3D spatial map of the environment based on the data collected.
@@ -78,10 +84,10 @@ The expected output is a 3D spatial map, accurately reflecting the scanned envir
 3. ToF sensor speed limits overall system performance.
 
 ## Circuit Schematic
-Refer to the project's circuit schematic for detailed wiring and component placement.
+![Circuit Schematic](Circuit_Schematic.PNG)
 
 ## Programming Logic Flowchart
-Refer to the included flowchart to understand the microcontroller's programming logic and Python code flow.
+![Programming Logic Flowchart](Flowchart.PNG)
 
 ## References
 1. [Cortex-M4 Technical Reference Manual](https://avenue.cllmcmaster.ca/d2l/le/content/418585/viewContent/3472453/View)
